@@ -43,6 +43,7 @@
     "template": [
       "import {open} moduleForComponent, test {close} from 'ember-qunit';",
       "import t from 'htmlbars-inline-precompile';",
+      "// import wait from 'ember-test-helpers/wait';",
       "",
       "moduleForComponent('{}', 'component:{}', {",
       "  integration: true",
