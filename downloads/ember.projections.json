@@ -19,6 +19,8 @@
       "moduleFor('adapter:{}');",
       "",
       "test('it adapts', function(assert) {",
+      "  assert.expect(1);",
+      "",
       "  var adapter = this.subject();",
       "  assert.ok(adapter);",
       "});"
@@ -49,9 +51,11 @@
       "  integration: true",
       "});",
       "",
-      "test('it is a dom building block', function(assert) {",
+      "test('does things', function(assert) {",
+      "  assert.expect(1);",
+      "",
       "  this.render(t`{open}{open}{}{close}{close}`);",
-      "  assert.equal(this.$().text().trim(), 'bob the builder');",
+      "  assert.equal(this.$('.selector').text().trim(), '');",
       "});"
     ],
     "alternate": "app/components/{}.js"
@@ -77,6 +81,8 @@
       "moduleFor('controller:{}');",
       "",
       "test('it remote controls', function(assert) {",
+      "  assert.expect(1);",
+      "",
       "  var controller = this.subject();",
       "  assert.ok(controller);",
       "});"
@@ -107,6 +113,8 @@
       "module('helper:{}');",
       "",
       "test('aide', function(assert) {",
+      "  assert.expect(1);",
+      "",
       "  let result = {camelcase}();",
       "  assert.equal(result, 'a winner is you');",
       "});"
@@ -133,6 +141,8 @@
       "moduleForModel('{}', 'model:{}');",
       "",
       "test('fashion show', function(assert) {",
+      "  assert.expect(1);",
+      "",
       "  let model = this.subject();",
       "  // let store = this.store();",
       "  assert.equal(model.get('appleBottomJeans'), 'Boots with the fur');",
@@ -165,6 +175,8 @@
       "moduleFor('route:{}');",
       "",
       "test('path to success', function(assert) {",
+      "  assert.expect(1);",
+      "",
       "  let route = this.subject();",
       "  route.send('action', 1);",
       "  assert.equal(route.get('actionResult'), 1);",
